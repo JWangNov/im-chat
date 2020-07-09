@@ -24,7 +24,7 @@ public class NettyServerHandlerInitializer extends ChannelInitializer<Channel> {
     private NettyServerHandler nettyServerHandler;
 
     @Override
-    protected void initChannel(Channel channel) throws Exception {
+    protected void initChannel(Channel channel) {
         ChannelPipeline pipeline = channel.pipeline();
         pipeline
                 .addLast(new ReadTimeoutHandler(READ_TIMEOUT_SECONDS, TimeUnit.SECONDS))
