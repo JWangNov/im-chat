@@ -17,7 +17,7 @@ import java.util.concurrent.ConcurrentMap;
  */
 @Component
 @Slf4j
-public class NettyChannelManager {
+public class ImChatChannelManager {
 
     private static final AttributeKey<String> CHANNEL_ATTR_KEY_USER = AttributeKey.newInstance("user");
 

@@ -1,6 +1,6 @@
 package com.jw.imchatserver.server;
 
-import com.jw.imchatserver.server.handler.NettyChannelManager;
+import com.jw.imchatserver.server.handler.ImChatChannelManager;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -11,10 +11,10 @@ import org.springframework.stereotype.Component;
 @Component
 @ChannelHandler.Sharable
 @Slf4j
-public class NettyServerHandler extends ChannelInboundHandlerAdapter {
+public class ImChatServerHandler extends ChannelInboundHandlerAdapter {
 
     @Autowired
-    private NettyChannelManager channelManager;
+    private ImChatChannelManager channelManager;
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) {

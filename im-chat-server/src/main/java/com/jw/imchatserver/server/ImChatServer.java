@@ -1,6 +1,6 @@
 package com.jw.imchatserver.server;
 
-import com.jw.imchatserver.server.handler.NettyServerHandlerInitializer;
+import com.jw.imchatserver.server.handler.ImChatServerHandlerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
@@ -19,12 +19,12 @@ import java.net.InetSocketAddress;
 
 @Component
 @Slf4j
-public class NettyServer {
+public class ImChatServer {
 
     @Value("${netty.port}")
     private Integer port;
     @Autowired
-    private NettyServerHandlerInitializer nettyServerHandlerInitializer;
+    private ImChatServerHandlerInitializer imChatServerHandlerInitializer;
 
     private Channel channel;
     /*
@@ -51,7 +51,7 @@ public class NettyServer {
                 .childOption(ChannelOption.SO_KEEPALIVE, true)
                 // allow sending small packets, to avoid delay
                 .childOption(ChannelOption.TCP_NODELAY, true)
-                .childHandler(nettyServerHandlerInitializer);
+                .childHandler(imChatServerHandlerInitializer);
         ChannelFuture future = bootstrap.bind().sync();
         if (future.isSuccess()) {
             channel = future.channel();
