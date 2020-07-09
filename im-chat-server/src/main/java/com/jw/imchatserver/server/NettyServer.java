@@ -33,7 +33,6 @@ public class NettyServer {
      *  affecting the connection of new clients
      */
     private EventLoopGroup masterGroup = new NioEventLoopGroup();
-    // to accept client read / write operations
     /*
      * to accept client read / write operations
      * can support multiple clients
