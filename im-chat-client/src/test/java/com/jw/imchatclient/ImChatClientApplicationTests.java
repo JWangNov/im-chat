@@ -1,4 +1,4 @@
-package com.jw.imchat.client;
+package com.jw.imchatclient;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,6 +1,6 @@
-package com.jw.imchat.server.server;
+package com.jw.imchatserver.server;
 
-import com.jw.imchat.server.server.handler.NettyServerHandlerInitializer;
+import com.jw.imchatserver.server.handler.NettyServerHandlerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;

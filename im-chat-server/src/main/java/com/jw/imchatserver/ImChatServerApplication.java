@@ -1,13 +1,13 @@
-package com.jw.imchat.client;
+package com.jw.imchatserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ImChatClientApplication {
+public class ImChatServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ImChatClientApplication.class, args);
+        SpringApplication.run(ImChatServerApplication.class, args);
     }
 
 }
