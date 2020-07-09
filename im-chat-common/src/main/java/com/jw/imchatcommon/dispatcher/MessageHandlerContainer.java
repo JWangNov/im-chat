@@ -21,7 +21,7 @@ public class MessageHandlerContainer implements InitializingBean {
     private ApplicationContext applicationContext;
 
     @Override
-    public void afterPropertiesSet() throws Exception {
+    public void afterPropertiesSet() {
         applicationContext.getBeansOfType(MessageHandler.class).values().forEach(
                 messageHandler -> handlerMap.put(messageHandler.getType(), messageHandler)
         );
