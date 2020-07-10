@@ -47,12 +47,12 @@ public class ImChatClient {
             @Override
             public void operationComplete(ChannelFuture channelFuture) throws Exception {
                 if (!channelFuture.isSuccess()) {
-                    log.error("[start][IM Chat Client failed to connect server ({}:{})", serverHost, serverPort);
+                    log.error("[start][IM Chat Client failed to connect server ({}:{})]", serverHost, serverPort);
                     reconnect();
                     return;
                 }
                 channel = channelFuture.channel();
-                log.info("[start][IM Chat Client has successfully connected to server ({}:{})", serverHost, serverPort);
+                log.info("[start][IM Chat Client has successfully connected to server ({}:{})]", serverHost, serverPort);
             }
         });
     }
@@ -70,7 +70,7 @@ public class ImChatClient {
                 , RECONNECT_SECONDS
                 , TimeUnit.SECONDS
         );
-        log.info("[reconnect][will reconnect in {} seconds", RECONNECT_SECONDS);
+        log.info("[reconnect][will reconnect in {} seconds]", RECONNECT_SECONDS);
     }
 
     @PreDestroy

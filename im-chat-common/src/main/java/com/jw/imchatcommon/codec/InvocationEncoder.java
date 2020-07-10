@@ -18,6 +18,6 @@ public class InvocationEncoder extends MessageToByteEncoder<Invocation> {
         output.writeInt(content.length);
         output.writeBytes(content);
 
-        log.info("[encode][channel ({}) has encoded a message ({})", ctx.channel().id(), input.toString());
+        log.info("[encode][channel ({}) has encoded a message ({})]", ctx.channel().id(), input.toString());
     }
 }

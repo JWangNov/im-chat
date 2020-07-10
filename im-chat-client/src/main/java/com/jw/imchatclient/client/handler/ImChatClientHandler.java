@@ -35,7 +35,7 @@ public class ImChatClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
         if (evt instanceof IdleStateEvent) {
-            log.info("[userEventTriggered][triggered a heartbeat");
+            log.info("[userEventTriggered][triggered a heartbeat]");
             HeartbeatRequest heartbeatRequest = new HeartbeatRequest();
             ctx.writeAndFlush(new Invocation(HeartbeatRequest.TYPE, heartbeatRequest))
                     .addListener(ChannelFutureListener.CLOSE_ON_FAILURE);

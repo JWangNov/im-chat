@@ -32,6 +32,6 @@ public class InvocationDecoder extends ByteToMessageDecoder {
         Invocation invocation = JSON.parseObject(content, Invocation.class);
         output.add(invocation);
 
-        log.info("[decode][channel ({}) has decoded a new message ({})", ctx.channel().id(), invocation.toString());
+        log.info("[decode][channel ({}) has decoded a new message ({})]", ctx.channel().id(), invocation.toString());
     }
 }

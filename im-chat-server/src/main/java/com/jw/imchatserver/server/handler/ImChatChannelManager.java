@@ -31,7 +31,7 @@ public class ImChatChannelManager {
      */
     public void add(Channel channel) {
         channelConcurrentMap.put(channel.id(), channel);
-        log.info("[add][add new channel {}", channel.id());
+        log.info("[add][add new channel {}]", channel.id());
     }
 
     /**
