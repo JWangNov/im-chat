@@ -36,6 +36,12 @@ public class MessageHandlerContainer implements InitializingBean {
         return handler;
     }
 
+    /**
+     * Reference:
+     * @see <a href="https://github.com/apache/rocketmq-spring/blob/a334685bd98886f669f42a205376cb7327ad6b96/rocketmq-spring-boot/src/main/java/org/apache/rocketmq/spring/support/DefaultRocketMQListenerContainer.java#L510">
+     * https://github.com/apache/rocketmq-spring
+     * </a>
+     */
     static Class<? extends Message> getMessageClass(MessageHandler handler) {
         Class<?> targetClass = AopProxyUtils.ultimateTargetClass(handler);
         Type[] interfaces = targetClass.getGenericInterfaces();

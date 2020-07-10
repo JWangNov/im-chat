@@ -32,12 +32,12 @@ public class ImChatServer {
      * avoid frequent data reading and writing of connected clients
      *  affecting the connection of new clients
      */
-    private EventLoopGroup masterGroup = new NioEventLoopGroup();
+    private final EventLoopGroup masterGroup = new NioEventLoopGroup();
     /*
      * to accept client read / write operations
      * can support multiple clients
      */
-    private EventLoopGroup workerGroup = new NioEventLoopGroup();
+    private final EventLoopGroup workerGroup = new NioEventLoopGroup();
 
 
     @PostConstruct

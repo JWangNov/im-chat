@@ -8,6 +8,12 @@ import lombok.NoArgsConstructor;
 
 /**
  * Message body
+ * <p>
+ * For encoding ({@link InvocationEncoder}),
+ * each {@link Invocation} is serialized in this format:
+ * [length] + [content]
+ * <p>
+ * This is to avoid unnecessary TCP sticking and unpacking
  */
 @AllArgsConstructor
 @NoArgsConstructor
@@ -34,6 +40,8 @@ public class Invocation {
         this.message = message;
         return this;
     }
+
+    // --- special toString to fit json format
 
     @Override
     public String toString() {
