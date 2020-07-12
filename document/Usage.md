@@ -48,9 +48,9 @@ mvn clean compile
 {
   "type":"AUTH_REQUEST",
   "message":
-    {
-      "accessToken":"user token"
-    }
+  {
+    "accessToken":"user token"
+  }
 }
 ```
 ### steps
@@ -77,11 +77,11 @@ from **client A** to **client B**
 {
   "type":"CHAT_SEND_TO_ONE_REQUEST",
   "message":
-    {
-      "toUser":"bravo",
-      "msgId":"1",
-      "content":"hello"
-    }
+  {
+    "toUser":"bravo",
+    "msgId":"1",
+    "content":"hello"
+  }
 }
 ```
 ### steps
@@ -116,10 +116,10 @@ from **client A** to all clients
 {
   "type":"CHAT_SEND_TO_ALL_REQUEST",
   "message":
-    {
-      "msgId":"2",
-      "content":"hey all"
-    }
+  {
+    "msgId":"2",
+    "content":"hey all"
+  }
 }
 ```
 ### steps
