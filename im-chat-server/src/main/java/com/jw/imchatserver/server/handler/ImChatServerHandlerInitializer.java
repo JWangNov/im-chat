@@ -3,7 +3,6 @@ package com.jw.imchatserver.server.handler;
 import com.jw.imchatcommon.codec.InvocationDecoder;
 import com.jw.imchatcommon.codec.InvocationEncoder;
 import com.jw.imchatcommon.dispatcher.MessageDispatcher;
-import com.jw.imchatserver.server.ImChatServerHandler;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -27,7 +26,9 @@ public class ImChatServerHandlerInitializer extends ChannelInitializer<Channel> 
     protected void initChannel(Channel channel) {
         ChannelPipeline pipeline = channel.pipeline();
         pipeline
+                // to check timeout
                 .addLast(new ReadTimeoutHandler(READ_TIMEOUT_SECONDS, TimeUnit.SECONDS))
+                // to add encoder and decoder
                 .addLast(new InvocationEncoder())
                 .addLast(new InvocationDecoder())
                 .addLast(messageDispatcher)

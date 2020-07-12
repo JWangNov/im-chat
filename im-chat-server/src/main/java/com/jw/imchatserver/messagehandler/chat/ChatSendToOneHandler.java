@@ -5,7 +5,7 @@ import com.jw.imchatcommon.dispatcher.MessageHandler;
 import com.jw.imchatserver.message.chat.ChatRedirectToUserRequest;
 import com.jw.imchatserver.message.chat.ChatSendResponse;
 import com.jw.imchatserver.message.chat.ChatSendToOneRequest;
-import com.jw.imchatserver.server.handler.ImChatChannelManager;
+import com.jw.imchatserver.server.ImChatChannelManager;
 import io.netty.channel.Channel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

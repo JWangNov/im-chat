@@ -1,4 +1,4 @@
-package com.jw.imchatserver.server.handler;
+package com.jw.imchatserver.server;
 
 import com.jw.imchatcommon.codec.Invocation;
 import io.netty.channel.Channel;
