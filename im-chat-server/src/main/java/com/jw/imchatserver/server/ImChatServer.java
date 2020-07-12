@@ -40,6 +40,9 @@ public class ImChatServer {
     private final EventLoopGroup workerGroup = new NioEventLoopGroup();
 
 
+    /**
+     * start im chat server
+     */
     @PostConstruct
     public void start() throws InterruptedException {
         ServerBootstrap bootstrap = new ServerBootstrap();
@@ -59,6 +62,9 @@ public class ImChatServer {
         }
     }
 
+    /**
+     * shutdown im chat server
+     */
     @PreDestroy
     public void shutdown() {
         if (channel != null) {

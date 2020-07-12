@@ -27,7 +27,7 @@ public class ImChatClientHandler extends ChannelInboundHandlerAdapter {
     }
 
     @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
         log.error("[exceptionCaught][exception thrown on channel ({})]", ctx.channel().id(), cause);
         ctx.channel().close();
     }
