@@ -22,10 +22,12 @@ public class ImChatClientHandlerInitializer extends ChannelInitializer<Channel> 
     private ImChatClientHandler imChatClientHandler;
 
     @Override
-    protected void initChannel(Channel channel) throws Exception {
+    protected void initChannel(Channel channel) {
         channel.pipeline()
+                // check idle & timeout
                 .addLast(new IdleStateHandler(READER_IDLE_TIME_SECONDS, 0, 0))
                 .addLast(new ReadTimeoutHandler(READ_TIMEOUT_SECONDS))
+                // add encoder and decoder
                 .addLast(new InvocationEncoder())
                 .addLast(new InvocationDecoder())
                 .addLast(messageDispatcher)
