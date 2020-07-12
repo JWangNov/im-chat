@@ -32,6 +32,9 @@ public class ImChatClient {
     private final EventLoopGroup eventGroup = new NioEventLoopGroup();
     private volatile Channel channel;
 
+    /**
+     * start im client
+     */
     @PostConstruct
     public void start() throws InterruptedException {
         Bootstrap bootstrap = new Bootstrap();
@@ -43,17 +46,14 @@ public class ImChatClient {
                 .option(ChannelOption.TCP_NODELAY, true)
                 .handler(imChatClientHandlerInitializer);
 
-        bootstrap.connect().addListener(new ChannelFutureListener() {
-            @Override
-            public void operationComplete(ChannelFuture channelFuture) throws Exception {
-                if (!channelFuture.isSuccess()) {
-                    log.error("[start][IM Chat Client failed to connect server ({}:{})]", serverHost, serverPort);
-                    reconnect();
-                    return;
-                }
-                channel = channelFuture.channel();
-                log.info("[start][IM Chat Client has successfully connected to server ({}:{})]", serverHost, serverPort);
+        bootstrap.connect().addListener((ChannelFutureListener) channelFuture -> {
+            if (!channelFuture.isSuccess()) {
+                log.error("[start][IM Chat Client failed to connect server ({}:{})]", serverHost, serverPort);
+                reconnect();
+                return;
             }
+            channel = channelFuture.channel();
+            log.info("[start][IM Chat Client has successfully connected to server ({}:{})]", serverHost, serverPort);
         });
     }
 
@@ -73,6 +73,9 @@ public class ImChatClient {
         log.info("[reconnect][will reconnect in {} seconds]", RECONNECT_SECONDS);
     }
 
+    /**
+     * shutdown im client
+     */
     @PreDestroy
     public void shutdown() {
         if (channel != null) {
