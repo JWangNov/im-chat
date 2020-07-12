@@ -1,5 +1,13 @@
 # im chat
- IM chatting room based on Netty
+IM chatting room based on Netty
+
+## Structure
+```
+im-chat
+├── im-chat-client      netty client module
+├── im-chat-common      netty common: custom protocol, codec, msg dispactch
+└── im-chat-server      netty server module
+```
 
 ## API
 _(for detailed info, see [Usage.md](/document/Usage.md))_
