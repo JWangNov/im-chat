@@ -2,9 +2,9 @@ package com.jw.imchatserver.messagehandler.chat;
 
 import com.jw.imchatcommon.codec.Invocation;
 import com.jw.imchatcommon.dispatcher.MessageHandler;
-import com.jw.imchatserver.message.chat.ChatRedirectToUserRequest;
-import com.jw.imchatserver.message.chat.ChatSendResponse;
-import com.jw.imchatserver.message.chat.ChatSendToOneRequest;
+import com.jw.imchatcommon.message.impl.chat.ChatRedirectToUserRequest;
+import com.jw.imchatcommon.message.impl.chat.ChatSendResponse;
+import com.jw.imchatcommon.message.impl.chat.ChatSendToOneRequest;
 import com.jw.imchatserver.server.ImChatChannelManager;
 import io.netty.channel.Channel;
 import org.springframework.beans.factory.annotation.Autowired;

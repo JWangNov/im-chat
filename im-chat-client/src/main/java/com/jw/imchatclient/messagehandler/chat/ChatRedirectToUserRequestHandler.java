@@ -1,6 +1,6 @@
 package com.jw.imchatclient.messagehandler.chat;
 
-import com.jw.imchatclient.message.chat.ChatRedirectToUserRequest;
+import com.jw.imchatcommon.message.impl.chat.ChatRedirectToUserRequest;
 import com.jw.imchatcommon.dispatcher.MessageHandler;
 import io.netty.channel.Channel;
 import lombok.extern.slf4j.Slf4j;

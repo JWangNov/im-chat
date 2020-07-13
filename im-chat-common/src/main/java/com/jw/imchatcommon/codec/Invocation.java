@@ -1,7 +1,7 @@
 package com.jw.imchatcommon.codec;
 
 import com.alibaba.fastjson.JSON;
-import com.jw.imchatcommon.dispatcher.Message;
+import com.jw.imchatcommon.message.Message;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

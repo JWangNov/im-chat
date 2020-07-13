@@ -1,4 +1,4 @@
-package com.jw.imchatcommon.dispatcher;
+package com.jw.imchatcommon.message;
 
 public interface Message {
     // leave this empty, just for further implement based on this
