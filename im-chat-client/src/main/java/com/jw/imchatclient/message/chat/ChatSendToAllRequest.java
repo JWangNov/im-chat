@@ -1,6 +1,6 @@
 package com.jw.imchatclient.message.chat;
 
-import com.jw.imchatcommon.dispatcher.Message;
+import com.jw.imchatcommon.message.Message;
 import lombok.Getter;
 
 /**

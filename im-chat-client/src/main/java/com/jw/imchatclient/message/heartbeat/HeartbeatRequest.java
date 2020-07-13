@@ -1,6 +1,6 @@
 package com.jw.imchatclient.message.heartbeat;
 
-import com.jw.imchatcommon.dispatcher.Message;
+import com.jw.imchatcommon.message.Message;
 
 public class HeartbeatRequest implements Message {
 

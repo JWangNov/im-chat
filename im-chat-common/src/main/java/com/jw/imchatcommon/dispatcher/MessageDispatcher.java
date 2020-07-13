@@ -2,6 +2,7 @@ package com.jw.imchatcommon.dispatcher;
 
 import com.alibaba.fastjson.JSON;
 import com.jw.imchatcommon.codec.Invocation;
+import com.jw.imchatcommon.message.Message;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
