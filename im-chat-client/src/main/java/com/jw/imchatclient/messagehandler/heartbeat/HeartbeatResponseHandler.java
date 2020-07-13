@@ -1,6 +1,6 @@
 package com.jw.imchatclient.messagehandler.heartbeat;
 
-import com.jw.imchatclient.message.heartbeat.HeartbeatResponse;
+import com.jw.imchatcommon.message.impl.heartbeat.HeartbeatResponse;
 import com.jw.imchatcommon.dispatcher.MessageHandler;
 import io.netty.channel.Channel;
 import lombok.extern.slf4j.Slf4j;

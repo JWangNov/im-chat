@@ -1,29 +1,25 @@
-package com.jw.imchatclient.message.chat;
+package com.jw.imchatcommon.message.impl.chat;
 
 import com.jw.imchatcommon.message.Message;
 import lombok.Getter;
 
-/**
- * This is to send message to all client
- * <p>
- * todo: for group chat, need to add groupId based on this class, also add groupId field into all clients
- */
 @Getter
-public class ChatSendToAllRequest implements Message {
+public class ChatRedirectToUserRequest implements Message {
 
-    public static final String TYPE = "CHAT_SEND_TO_ALL_REQUEST";
+    public static final String TYPE = "CHAT_REDIRECT_TO_USER_REQUEST";
 
     private String msgId;
     private String content;
+    // TODO: maybe need to add field "fromUser".. tbd
 
     // --- special setters for streaming
 
-    public ChatSendToAllRequest setMsgId(String msgId) {
+    public ChatRedirectToUserRequest setMsgId(String msgId) {
         this.msgId = msgId;
         return this;
     }
 
-    public ChatSendToAllRequest setContent(String content) {
+    public ChatRedirectToUserRequest setContent(String content) {
         this.content = content;
         return this;
     }
@@ -32,7 +28,7 @@ public class ChatSendToAllRequest implements Message {
 
     @Override
     public String toString() {
-        return "ChatSendToAllRequest{" +
+        return "ChatRedirectToUserRequest{" +
                 "msgId='" + msgId + '\'' +
                 ", content='" + content + '\'' +
                 '}';

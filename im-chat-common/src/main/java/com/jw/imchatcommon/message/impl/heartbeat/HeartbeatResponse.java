@@ -1,4 +1,4 @@
-package com.jw.imchatclient.message.heartbeat;
+package com.jw.imchatcommon.message.impl.heartbeat;
 
 import com.jw.imchatcommon.message.Message;
 

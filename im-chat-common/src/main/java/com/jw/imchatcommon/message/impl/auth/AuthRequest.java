@@ -1,4 +1,4 @@
-package com.jw.imchatclient.message.auth;
+package com.jw.imchatcommon.message.impl.auth;
 
 import com.jw.imchatcommon.message.Message;
 import lombok.Getter;
