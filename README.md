@@ -5,7 +5,7 @@ IM chatting room based on Netty
 ```
 im-chat
 ├── im-chat-client      netty client module
-├── im-chat-common      netty common: custom protocol, codec, msg dispactch
+├── im-chat-common      netty common: custom protocol, codec, messages, msg dispactch
 └── im-chat-server      netty server module
 ```
 
