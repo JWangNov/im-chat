@@ -2,8 +2,8 @@ package com.jw.imchatserver.messagehandler.heartbeat;
 
 import com.jw.imchatcommon.codec.Invocation;
 import com.jw.imchatcommon.dispatcher.MessageHandler;
-import com.jw.imchatserver.message.heartbeat.HeartbeatRequest;
-import com.jw.imchatserver.message.heartbeat.HeartbeatResponse;
+import com.jw.imchatcommon.message.impl.heartbeat.HeartbeatRequest;
+import com.jw.imchatcommon.message.impl.heartbeat.HeartbeatResponse;
 import io.netty.channel.Channel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

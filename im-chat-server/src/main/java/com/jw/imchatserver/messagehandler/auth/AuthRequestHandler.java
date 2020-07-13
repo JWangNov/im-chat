@@ -2,8 +2,8 @@ package com.jw.imchatserver.messagehandler.auth;
 
 import com.jw.imchatcommon.codec.Invocation;
 import com.jw.imchatcommon.dispatcher.MessageHandler;
-import com.jw.imchatserver.message.auth.AuthRequest;
-import com.jw.imchatserver.message.auth.AuthResponse;
+import com.jw.imchatcommon.message.impl.auth.AuthRequest;
+import com.jw.imchatcommon.message.impl.auth.AuthResponse;
 import com.jw.imchatserver.server.ImChatChannelManager;
 import io.netty.channel.Channel;
 import org.springframework.beans.factory.annotation.Autowired;
