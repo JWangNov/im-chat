@@ -2,8 +2,12 @@ package com.jw.imchatcommon.message.impl.chat;
 
 import com.jw.imchatcommon.message.Message;
 import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 
 @Getter
+@Setter
+@Accessors(chain = true)
 public class ChatSendResponse implements Message {
 
     public static final String TYPE = "CHAT_SEND_RESPONSE";
@@ -11,23 +15,6 @@ public class ChatSendResponse implements Message {
     private String msgId;
     private Integer code;
     private String message;
-
-    // --- special setters for streaming
-
-    public ChatSendResponse setMsgId(String msgId) {
-        this.msgId = msgId;
-        return this;
-    }
-
-    public ChatSendResponse setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-
-    public ChatSendResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
 
     // --- special toString to fit json format
 
