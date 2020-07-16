@@ -5,4 +5,6 @@ public interface Message {
 
     // To implement this, the class needs to have:
     // --- special toString to fit json format
+    // Also, its setters should allow chaining
+    // --- can use Lombok @Accessors(chain = true)
 }
