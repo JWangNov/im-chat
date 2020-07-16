@@ -2,8 +2,12 @@ package com.jw.imchatcommon.message.impl.chat;
 
 import com.jw.imchatcommon.message.Message;
 import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 
 @Getter
+@Setter
+@Accessors(chain = true)
 public class ChatSendToOneRequest implements Message {
 
     public static final String TYPE = "CHAT_SEND_TO_ONE_REQUEST";
@@ -11,23 +15,6 @@ public class ChatSendToOneRequest implements Message {
     private String toUser;
     private String msgId;
     private String content;
-
-    // --- special setters for streaming
-
-    public ChatSendToOneRequest setToUser(String toUser) {
-        this.toUser = toUser;
-        return this;
-    }
-
-    public ChatSendToOneRequest setMsgId(String msgId) {
-        this.msgId = msgId;
-        return this;
-    }
-
-    public ChatSendToOneRequest setContent(String content) {
-        this.content = content;
-        return this;
-    }
 
     // --- special toString to fit json format
 
