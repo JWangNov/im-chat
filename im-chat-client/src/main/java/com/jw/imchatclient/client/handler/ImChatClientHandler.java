@@ -1,7 +1,7 @@
 package com.jw.imchatclient.client.handler;
 
 import com.jw.imchatclient.client.ImChatClient;
-import com.jw.imchatclient.message.heartbeat.HeartbeatRequest;
+import com.jw.imchatcommon.message.impl.heartbeat.HeartbeatRequest;
 import com.jw.imchatcommon.codec.Invocation;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandler;

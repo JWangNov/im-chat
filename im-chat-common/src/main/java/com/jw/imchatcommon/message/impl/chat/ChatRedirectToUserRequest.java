@@ -1,9 +1,13 @@
-package com.jw.imchatserver.message.chat;
+package com.jw.imchatcommon.message.impl.chat;
 
-import com.jw.imchatcommon.dispatcher.Message;
+import com.jw.imchatcommon.message.Message;
 import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 
 @Getter
+@Setter
+@Accessors(chain = true)
 public class ChatRedirectToUserRequest implements Message {
 
     public static final String TYPE = "CHAT_REDIRECT_TO_USER_REQUEST";
@@ -11,20 +15,6 @@ public class ChatRedirectToUserRequest implements Message {
     private String msgId;
     private String content;
     // TODO: maybe need to add field "fromUser".. tbd
-
-    // --- special setters for streaming
-
-    public ChatRedirectToUserRequest setMsgId(String msgId) {
-        this.msgId = msgId;
-        return this;
-    }
-
-    public ChatRedirectToUserRequest setContent(String content) {
-        this.content = content;
-        return this;
-    }
-
-    // --- special toString to fit json format
 
     @Override
     public String toString() {

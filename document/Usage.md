@@ -56,7 +56,7 @@ mvn clean compile
 ### steps
 1. start **server**
 1. start **client A**
-    - `curl -d 'type=AUTH_REQUEST&message={"accessToken":"alfa"}' http://localhost:8080/test/simulate`
+    - `curl -d 'type=AUTH_REQUEST&message={"accessToken":"alfa"}' http://localhost:8080/test/mock`
 ### log
 ```
 // server
@@ -87,11 +87,11 @@ from **client A** to **client B**
 ### steps
 1. start **server**
 1. start **client A**
-    - `curl -d 'type=AUTH_REQUEST&message={"accessToken":"alfa"}' http://localhost:8080/test/simulate`
+    - `curl -d 'type=AUTH_REQUEST&message={"accessToken":"alfa"}' http://localhost:8080/test/mock`
 1. start **client B**
-    - `curl -d 'type=AUTH_REQUEST&message={"accessToken":"bravo"}' http://localhost:8081/test/simulate`
+    - `curl -d 'type=AUTH_REQUEST&message={"accessToken":"bravo"}' http://localhost:8081/test/mock`
 1. send a message from **A** to **B**
-    - `curl -d 'type=CHAT_SEND_TO_ONE_REQUEST&message={toUser:"bravo",msgId:"1",content:"hello"}' http://localhost:8080/test/simulate`
+    - `curl -d 'type=CHAT_SEND_TO_ONE_REQUEST&message={toUser:"bravo",msgId:"1",content:"hello"}' http://localhost:8080/test/mock`
 ### log
 ```
 // server
@@ -125,13 +125,13 @@ from **client A** to all clients
 ### steps
 1. start **server**
 1. start **client A**
-    - `curl -d 'type=AUTH_REQUEST&message={"accessToken":"alfa"}' http://localhost:8080/test/simulate`
+    - `curl -d 'type=AUTH_REQUEST&message={"accessToken":"alfa"}' http://localhost:8080/test/mock`
 1. start **client B**
-    - `curl -d 'type=AUTH_REQUEST&message={"accessToken":"bravo"}' http://localhost:8081/test/simulate`
+    - `curl -d 'type=AUTH_REQUEST&message={"accessToken":"bravo"}' http://localhost:8081/test/mock`
 1. start **client C**
-    - `curl -d 'type=AUTH_REQUEST&message={"accessToken":"charlie"}' http://localhost:8082/test/simulate`
+    - `curl -d 'type=AUTH_REQUEST&message={"accessToken":"charlie"}' http://localhost:8082/test/mock`
 1. send a message from **A** to all (include **A** per se)
-    - `curl -d 'type=CHAT_SEND_TO_ALL_REQUEST&message={msgId:"2",content:"hey all"}' http://localhost:8080/test/simulate`
+    - `curl -d 'type=CHAT_SEND_TO_ALL_REQUEST&message={msgId:"2",content:"hey all"}' http://localhost:8080/test/mock`
 ### log
 ```
 // server

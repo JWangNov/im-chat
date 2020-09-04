@@ -1,6 +1,6 @@
 package com.jw.imchatclient.messagehandler.auth;
 
-import com.jw.imchatclient.message.auth.AuthResponse;
+import com.jw.imchatcommon.message.impl.auth.AuthResponse;
 import com.jw.imchatcommon.dispatcher.MessageHandler;
 import io.netty.channel.Channel;
 import lombok.extern.slf4j.Slf4j;

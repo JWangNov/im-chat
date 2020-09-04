@@ -1,10 +1,12 @@
 package com.jw.imchatcommon.codec;
 
 import com.alibaba.fastjson.JSON;
-import com.jw.imchatcommon.dispatcher.Message;
+import com.jw.imchatcommon.message.Message;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 
 /**
  * Message body
@@ -18,6 +20,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@Setter
+@Accessors(chain = true)
 public class Invocation {
 
     private String type;
@@ -28,20 +32,6 @@ public class Invocation {
         this.type = type;
         this.message = JSON.toJSONString(message);
     }
-
-    // --- special setters for streaming
-
-    public Invocation setType(String type) {
-        this.type = type;
-        return this;
-    }
-
-    public Invocation setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-
-    // --- special toString to fit json format
 
     @Override
     public String toString() {

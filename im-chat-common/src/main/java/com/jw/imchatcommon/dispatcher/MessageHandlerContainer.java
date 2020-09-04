@@ -1,5 +1,6 @@
 package com.jw.imchatcommon.dispatcher;
 
+import com.jw.imchatcommon.message.Message;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.aop.framework.AopProxyUtils;
 import org.springframework.beans.factory.InitializingBean;

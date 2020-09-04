@@ -1,23 +1,18 @@
-package com.jw.imchatserver.message.auth;
+package com.jw.imchatcommon.message.impl.auth;
 
-import com.jw.imchatcommon.dispatcher.Message;
+import com.jw.imchatcommon.message.Message;
 import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 
 @Getter
+@Setter
+@Accessors(chain = true)
 public class AuthRequest implements Message {
 
     public static final String TYPE = "AUTH_REQUEST";
 
     private String accessToken;
-
-    // --- special setters for streaming
-
-    public AuthRequest setAccessToken(String accessToken) {
-        this.accessToken = accessToken;
-        return this;
-    }
-
-    // --- special toString to fit json format
 
     @Override
     public String toString() {
