@@ -33,8 +33,6 @@ public class Invocation {
         this.message = JSON.toJSONString(message);
     }
 
-    // --- special toString to fit json format
-
     @Override
     public String toString() {
         return "Invocation{" +
