@@ -16,8 +16,6 @@ public class ChatRedirectToUserRequest implements Message {
     private String content;
     // TODO: maybe need to add field "fromUser".. tbd
 
-    // --- special toString to fit json format
-
     @Override
     public String toString() {
         return "ChatRedirectToUserRequest{" +
