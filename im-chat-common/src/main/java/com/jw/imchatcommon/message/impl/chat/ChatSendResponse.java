@@ -16,8 +16,6 @@ public class ChatSendResponse implements Message {
     private Integer code;
     private String message;
 
-    // --- special toString to fit json format
-
     @Override
     public String toString() {
         return "ChatSendResponse{" +
