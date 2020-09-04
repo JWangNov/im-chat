@@ -14,8 +14,6 @@ public class AuthRequest implements Message {
 
     private String accessToken;
 
-    // --- special toString to fit json format
-
     @Override
     public String toString() {
         return "AuthRequest{" +
