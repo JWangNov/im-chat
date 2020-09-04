@@ -1,10 +1,7 @@
 # TODOs
 
-## since v1.0
 - [x] deduplicate `message` package (**client** & **server**)
-- [ ] create unit tests (**common**)
-- [ ] replace dependency `fastjson` by `jackson` (**common**)
+- [ ] replace dependency `fastjson` by simply `jackson` (**common**)
+- [ ] replace custom protocol by `Google Protocol` & `Netty pipeline` (**common**, don't use `LineBasedFrameDecoder
+` cuz there could be some multi-line messages)
 - [ ] add `fromUser` into `ChatRedirectToUserRequest` (**common**)
-
-## since v1.1
-- [ ] tba..
