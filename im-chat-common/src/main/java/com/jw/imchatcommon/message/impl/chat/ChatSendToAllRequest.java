@@ -20,8 +20,6 @@ public class ChatSendToAllRequest implements Message {
     private String msgId;
     private String content;
 
-    // --- special toString to fit json format
-
     @Override
     public String toString() {
         return "ChatSendToAllRequest{" +
