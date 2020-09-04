@@ -1,5 +1,9 @@
 # im chat
-IM chatting room based on Netty
+IM chatting room based on Netty, which has functions of:
+- User's identity authentication
+- Heartbeat connection & idle detection between server and client
+- One-to-one private message
+- One-to-all broadcast message
 
 ## Structure
 ```
@@ -7,6 +11,16 @@ im-chat
 ├── im-chat-client      netty client module
 ├── im-chat-common      netty common: custom protocol, codec, messages, msg dispactch
 └── im-chat-server      netty server module
+```
+
+### Custom Protocol
+To avoid sticky TCP packet and unnecessary unpacking, 
+a [custom protocol](/im-chat-common/src/main/java/com/jw/imchatcommon/codec/InvocationEncoder.java) is implemented.
+
+Now each message has 2 parts: a header contains message length & a body contains message content.
+
+```
+MSG = [(Integer) MSG.length] + [(Bytes) MSG.content]
 ```
 
 ## API
@@ -22,7 +36,7 @@ POST params:
   }
 }
 ```
-### Send Private Chat
+### Send Private Chat Message
 POST params:
 ```json
 {
@@ -35,7 +49,7 @@ POST params:
   }
 }
 ```
-### Send Message to All
+### Send Broadcast Message to All
 POST params:
 ```json
 {
